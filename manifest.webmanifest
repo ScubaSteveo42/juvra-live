@@ -1,0 +1,13 @@
+{
+  "name": "Juvra — The Amazon Second Brain",
+  "short_name": "Juvra",
+  "description": "Your guide from Day 1 to your first profitable, ungated product.",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#f1f5f9",
+  "theme_color": "#0f172a",
+  "icons": [
+    { "src": "icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}
