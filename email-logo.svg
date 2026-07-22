@@ -1,6 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 660 660" width="660" height="660">
-  <!-- Juvra lockup for email headers: hexagon J mark + wordmark, cream on brand navy.
-       Art is vertically centered in a square so a center-crop yields the 660x200 banner. -->
+  <!-- amzOS powered-by-Juvra lockup for email headers: hexagon J mark + wordmark
+       + byline, cream on brand navy. Art vertically centered in a square so a
+       center-crop yields the 660x200 banner. -->
   <rect width="660" height="660" fill="#0f172a"/>
   <g transform="translate(0 230)">
     <g stroke="#F5F0E6" fill="none" stroke-width="11" stroke-linejoin="round" stroke-linecap="round">
@@ -8,6 +9,7 @@
     </g>
     <path d="M118 58 L118 124 Q118 142 100 142 Q84 142 82 128" stroke="#F5F0E6" fill="none" stroke-width="16" stroke-linecap="round"/>
     <path d="M138 66 L138 122 Q138 150 106 152" stroke="#F5F0E6" fill="none" stroke-width="8" stroke-linecap="round" opacity="0.85"/>
-    <text x="212" y="146" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="118" font-weight="800" letter-spacing="-2" fill="#F5F0E6">Juvra</text>
+    <text x="210" y="118" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="104" font-weight="800" letter-spacing="-2" fill="#F5F0E6">amzOS</text>
+    <text x="214" y="164" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="30" font-weight="500" letter-spacing="1" fill="#F5F0E6" opacity="0.75">powered by Juvra</text>
   </g>
 </svg>
