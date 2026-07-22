@@ -1,0 +1,2 @@
+function e(e,t){let n=e=>{let t=String(e??``);return/^[=+\-@\t\r]/.test(t)&&(t=`'${t}`),`"${t.replace(/"/g,`""`)}"`};return[e.map(n).join(`,`),...t.map(e=>e.map(n).join(`,`))].join(`
+`)}function t(t,n,r){let i=new Blob([e(n,r)],{type:`text/csv`}),a=document.createElement(`a`);a.href=URL.createObjectURL(i),a.download=t,a.click(),URL.revokeObjectURL(a.href)}function n(e){return`juvra-${e}-${new Date().toISOString().slice(0,10)}.csv`}export{n,t};

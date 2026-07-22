@@ -1,6 +1,6 @@
 {
-  "name": "Juvra — The Amazon Second Brain",
-  "short_name": "Juvra",
+  "name": "amzOS — powered by Juvra",
+  "short_name": "amzOS",
   "description": "Your guide from Day 1 to your first profitable, ungated product.",
   "start_url": ".",
   "display": "standalone",
