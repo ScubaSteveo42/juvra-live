@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Getting ungated — how to use the Package Builder</title>
+<style>
+  :root { color-scheme: light dark; --ink:#12172b; --body:#2b3350; --muted:#6b7399;
+          --accent:#5b5bd6; --rule:#dcdfea; --warm:#fff7e8; --warmb:#e8b54b;
+          --bad:#fdecec; --badb:#d9534f; --bg:#fff; --card:#fafbfe; }
+  @media (prefers-color-scheme: dark) {
+    :root { --ink:#e8ecf8; --body:#c2c9de; --muted:#8b93b0; --accent:#9b9bff; --rule:#242c44;
+            --warm:#241f14; --warmb:#8a6a26; --bad:#2a1618; --badb:#8c3b38; --bg:#0f1420; --card:#141a2b; }
+  }
+  * { box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+         max-width: 720px; margin: 0 auto; padding: 40px 20px 90px; line-height: 1.62;
+         color: var(--body); background: var(--bg); font-size: 16px; }
+  h1 { font-size: 2rem; line-height: 1.15; margin: 0 0 4px; color: var(--ink); letter-spacing: -0.02em; }
+  .sub { color: var(--muted); margin: 0 0 28px; }
+  h2 { font-size: 1.25rem; margin: 38px 0 10px; color: var(--ink); letter-spacing: -0.01em; }
+  h2 .n { color: var(--accent); }
+  p { margin: 0 0 12px; }
+  .lead { font-size: 1.08rem; color: var(--ink); }
+  ul { margin: 0 0 12px; padding-left: 20px; }
+  li { margin-bottom: 7px; }
+  b, strong { color: var(--ink); }
+  .quote { margin: 4px 0 14px; padding-left: 14px; border-left: 3px solid var(--rule);
+           color: var(--ink); font-style: italic; }
+  .path { background: var(--card); border: 1px solid var(--rule); border-radius: 10px;
+          padding: 12px 14px; margin: 4px 0 14px; color: var(--ink); }
+  .chips { display: grid; grid-template-columns: auto 1fr; gap: 10px 14px; align-items: center;
+           margin: 6px 0 16px; }
+  .chip { display: inline-block; padding: 6px 10px; border-radius: 999px; font-size: 0.76rem;
+          font-weight: 700; letter-spacing: 0.04em; text-align: center; white-space: nowrap; }
+  .chip.must { background: var(--bad); border: 1px solid var(--badb); color: var(--badb); }
+  .chip.worth { background: var(--warm); border: 1px solid var(--warmb); color: var(--warmb); }
+  .callout { background: var(--warm); border: 1px solid var(--warmb); border-radius: 12px;
+             padding: 14px 16px; margin: 22px 0; }
+  .callout p { margin: 0; }
+  .callout p + p { margin-top: 8px; }
+  .qa { margin: 0 0 16px; }
+  .qa .q { color: var(--ink); font-weight: 650; margin: 0 0 3px; }
+  .qa .a { margin: 0; }
+  footer { margin-top: 46px; padding-top: 16px; border-top: 1px solid var(--rule);
+           color: var(--muted); font-size: 0.85rem; }
+</style>
+</head>
+<body>
+
+<h1>Getting ungated</h1>
+<p class="sub">How to use the Package Builder in amzOS · Divine Amazon</p>
+
+<p class="lead">Ungating is a paperwork problem wearing a numbers-game costume. The tool builds the paperwork. Sending it enough times is still on you.</p>
+<p>You upload your receipts and photos. It reads them, checks them the way an Amazon reviewer would, and hands you one finished PDF to upload. About five minutes, most of it waiting on us.</p>
+
+<h2>Before you spend a dollar</h2>
+<p>Open the brand's approval page in Seller Central and read the document rules first. If it says any of these:</p>
+<p class="quote">"not a retail order confirmation or invoice" · "from a manufacturer or distributor" · "wholesale invoice" · "authorized distributor"</p>
+<p>then a store receipt will never pass, no matter how clean the package. That is not something better paperwork fixes — go source it wholesale, or put the money where it can win. Anything else, and a receipt is fine.</p>
+<p>Then do the math: <b>required units × unit cost</b> is what you are putting at risk. Buy the cheapest item that qualifies and that you can resell if this fails.</p>
+
+<h2><span class="n">1.</span> Documents</h2>
+<p>Upload everything you have. This is the only step that is genuinely required.</p>
+<ul>
+  <li><b>Receipts or invoices.</b> Every product you want approved has to be a line on one of them.</li>
+  <li><b>Delivery proof</b>, if it was shipped — the tracking page saved as a PDF, or the carrier email.</li>
+  <li><b>Photos.</b> One wide shot with every unit visible, plus a close-up of the barcode per product. Digits readable, brand legible, plain background. Glare is what kills a UPC shot.</li>
+</ul>
+<p>A phone photo of a paper receipt is fine — it reads scans. <b>Bought over several trips? Upload every receipt.</b> It keeps them separate and adds the units up for you.</p>
+<p>Reading them takes about twenty seconds. You can leave the page.</p>
+
+<h2><span class="n">2.</span> Details</h2>
+<p>Everything here came off your documents. You are confirming, not typing.</p>
+<ul>
+  <li>A red <b>*</b> means required. Everything else is optional and says so.</li>
+  <li><b>Legal name and address must match Seller Central exactly.</b> You type these once, ever — they are remembered for every brand after this.</li>
+  <li><b>How did you get these items?</b> Shipped, or picked up in store. This one matters: pickup means there is no address and no tracking, and once you tap it nothing will ask you for either.</li>
+  <li><b>The ASIN</b> is the one thing a receipt can never tell us. Open the live Amazon listing — it is in the URL after <code>/dp/</code>, and in the product details.</li>
+</ul>
+<p>If it says something you typed does not match your documents, the document is usually right. There is a <b>use the document</b> link on every one of those.</p>
+
+<h2><span class="n">3.</span> Match</h2>
+<p>Amazon checks that whoever bought the product is whoever is asking to sell it. This is the step people skip. None of it is required to build.</p>
+<p>Got a mismatch you cannot undo — bought on a personal card, shipped to a prep centre? Explain it in one sentence. It goes in your cover letter. <b>Explained up front, it usually passes. Left for them to find, it usually does not.</b></p>
+
+<h2><span class="n">4.</span> Build</h2>
+<p>Read the list before you press the button. Two kinds of thing show up there:</p>
+<div class="chips">
+  <span class="chip must">MUST FIX</span><span>This would get the submission sent back. Fix it first.</span>
+  <span class="chip worth">WORTH KNOWING</span><span>Your judgement call. It does not stop you sending.</span>
+</div>
+<p>Building takes about two minutes and runs on our side — leave the page, refresh, come back, it keeps going. You can name the file if you want; we always put the version on the end so Amazon sees a new file each time.</p>
+<p>If it stops before building, it is telling you what a reviewer would have caught. Nothing is lost. Fix what it lists and build again.</p>
+<p>If it says the problem is on our side, it is on our side. Nothing you uploaded needs changing. Try again in a few minutes, or use the Claude chat option underneath — that runs on your own account and works even when ours does not.</p>
+<p>Twenty builds a day are included. Almost nobody gets near that.</p>
+
+<h2><span class="n">5.</span> Submit</h2>
+<p>Download the PDF, then:</p>
+<p class="path">Seller Central → Inventory → Add a Product → search the brand → <b>Listing limitations apply</b> → Request approval → upload the PDF where it asks for your invoice.</p>
+<p>Answering a case you already have open instead? Attach it as a reply in Account Health → your case.</p>
+<p>Then log the send in the tool so the version number stays straight.</p>
+
+<h2>When it comes back denied</h2>
+<p><b>This is the normal path, not a failure.</b> Double-digit sends on a single brand is normal. Nothing happens to your account or your sales when they say no.</p>
+<ul>
+  <li>The first denial usually lands in minutes. That is an automated filter, not a person. Do not read anything into it.</li>
+  <li>Send the same package again with the version bumped. A different filename alone sometimes reroutes it.</li>
+  <li>After that, strengthen one thing at a time — sharper photos, more barcode shots, extra proof.</li>
+  <li>Match the rejection reason to its fix before you resend. The tool lists them after your first denial. Stapling more documents onto the wrong problem just reads as padding.</li>
+</ul>
+
+<h2>Straight answers</h2>
+<div class="qa"><p class="q">It flagged something. Can I still send it?</p>
+<p class="a">If it says <b>MUST FIX</b>, fix it — that one comes back. If it says <b>WORTH KNOWING</b>, that is your call, and it does not stop you. Trying costs you nothing but the time to resend.</p></div>
+<div class="qa"><p class="q">Will it actually give me the PDF?</p>
+<p class="a">Yes. It appears on the Build step the moment it finishes, and it is on the Submit step too. Download it as many times as you like — it stays on the case.</p></div>
+<div class="qa"><p class="q">I am on the Submit page and I do not see it.</p>
+<p class="a">Then it has not been built yet. Go back to Build and run it. If you did build it, it is the button at the top of Submit.</p></div>
+<div class="qa"><p class="q">It was an in-store pickup. There is no address — what do I put?</p>
+<p class="a">Nothing. Tap <b>Picked up in store</b> on the Details step. Your receipt is the proof you have the goods, and after that nothing will ask you for an address, a tracking number or a delivery scan.</p></div>
+<div class="qa"><p class="q">I have three receipts with four units each and it is a ten-unit ungate.</p>
+<p class="a">Upload all three. It keeps them apart and adds the units up. Worth checking the requirement page first, though — some brands want the whole quantity on one invoice, and that is a different problem.</p></div>
+<div class="qa"><p class="q">The build button will not do anything.</p>
+<p class="a">Something required is missing. The list above the button says which, and each line has a link straight to it.</p></div>
+
+<div class="callout">
+  <p><b>One rule that does not bend</b></p>
+  <p>Never edit a document. Red boxes, arrows and captions on a <i>copy</i> are fine — they point at what is already there. Changing what a document says is forgery, and it is the fastest way to lose the account you are trying to build.</p>
+</div>
+
+<footer>amzOS — powered by Juvra · Divine Amazon</footer>
+</body>
+</html>
